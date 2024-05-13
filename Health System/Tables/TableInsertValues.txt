@@ -1,0 +1,244 @@
+
+--Hospitals tablosuna veri ekleme
+insert into hospitals (hospital_name,adress,phone) values
+('Bilkent Şehir Hastanesi','Çankaya','(0312) 552 60 00'),
+('Ankara Etlik Şehir Hastanesi','Yenimahalle','(0312) 552 60 20'),
+('Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi','Keçiören','(0312) 552 60 32'),
+('Sincan Eğitim ve Araştırma Hastanesi','Sincan','(0312) 552 60 40'),
+('Ulucanlar Göz Eğitim ve Araştırma Hastanesi','Altındağ','(0312) 552 60 50'),
+('Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi','Altındağ','(0312) 552 60 10')
+
+
+--Hospitals detail tablosuna veri ekleme
+INSERT INTO hospital_departments (hospital_id, department_name, department_details)
+VALUES 
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'Dahiliye', '{"hasta_kapasitesi": 50, "doktor_sayisi": 10}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'Cerrahi', '{"hasta_kapasitesi": 30, "doktor_sayisi": 8}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'Kardiyoloji', '{"hasta_kapasitesi": 50, "doktor_sayisi": 10}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'Nöroloji', '{"hasta_kapasitesi": 35, "doktor_sayisi": 7}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'Ortopedi', '{"hasta_kapasitesi": 45, "doktor_sayisi": 10}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'KBB', '{"hasta_kapasitesi": 40, "doktor_sayisi": 6}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'Göz Hastalıkları', '{"hasta_kapasitesi": 30, "doktor_sayisi": 5}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'Radyoloji', '{"hasta_kapasitesi": 25, "doktor_sayisi": 4}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'), 'Üroloji', '{"hasta_kapasitesi": 35, "doktor_sayisi": 7}')
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'), 'Dahiliye', '{"hasta_kapasitesi": 50, "doktor_sayisi": 10}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'), 'Cerrahi', '{"hasta_kapasitesi": 30, "doktor_sayisi": 8}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'), 'KBB', '{"hasta_kapasitesi": 50, "doktor_sayisi": 10}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'), 'Nöroloji', '{"hasta_kapasitesi": 35, "doktor_sayisi": 7}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'), 'Üroloji', '{"hasta_kapasitesi": 45, "doktor_sayisi": 10}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'), 'Radyoloji', '{"hasta_kapasitesi": 50, "doktor_sayisi": 10}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'), 'Cerrahi', '{"hasta_kapasitesi": 40, "doktor_sayisi": 8}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'), 'Kardiyoloji', '{"hasta_kapasitesi": 45, "doktor_sayisi": 9}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'), 'Göz Hastalıkları', '{"hasta_kapasitesi": 35, "doktor_sayisi": 7}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'), 'Nöroloji', '{"hasta_kapasitesi": 30, "doktor_sayisi": 6}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'), 'Üroloji', '{"hasta_kapasitesi": 25, "doktor_sayisi": 5}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'), 'Psikiyatri', '{"hasta_kapasitesi": 20, "doktor_sayisi": 4}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Sincan Eğitim ve Araştırma Hastanesi'), 'Cerrahi', '{"hasta_kapasitesi": 40, "doktor_sayisi": 8}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Sincan Eğitim ve Araştırma Hastanesi'), 'Kardiyoloji', '{"hasta_kapasitesi": 45, "doktor_sayisi": 9}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Sincan Eğitim ve Araştırma Hastanesi'), 'Göz Hastalıkları', '{"hasta_kapasitesi": 35, "doktor_sayisi": 7}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Sincan Eğitim ve Araştırma Hastanesi'), 'Nöroloji', '{"hasta_kapasitesi": 30, "doktor_sayisi": 6}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ulucanlar Göz Eğitim ve Araştırma Hastanesi'), 'Göz Hastalıkları', '{"hasta_kapasitesi": 40, "doktor_sayisi": 8}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi'), 'Göz Hastalıkları', '{"hasta_kapasitesi": 40, "doktor_sayisi": 8}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi'), 'Kardiyoloji', '{"hasta_kapasitesi": 45, "doktor_sayisi": 9}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi'), 'Ortopedi', '{"hasta_kapasitesi": 35, "doktor_sayisi": 7}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi'), 'Nöroloji', '{"hasta_kapasitesi": 30, "doktor_sayisi": 6}')
+
+--Doktor tablosuna veri ekleme
+INSERT INTO doctors (hospital_id,firstname,lastname,mail,phone,working_hours)
+values
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),'Ufuk','Liman','abc@hotmail.com','321321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Çarşamba": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),'Esra','Çiftci','abc@hotmail.com','342432','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Cuma": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),'Arife','Arslan','abc@hotmail.com','34324','{"Salı": {"start_time": "08:00", "end_time": "17:00"}, "Perşembe": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),'Meryem','Yılmaz','abc@hotmail.com','142123','{"Çarşamba": {"start_time": "08:00", "end_time": "17:00"}, "Perşembe": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'),'Ahmet','Naslı','abc@hotmail.com','32121','{"Perşembe": {"start_time": "08:00", "end_time": "17:00"}, "Cuma": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'),'Burak','Aydoğ','abc@hotmail.com','231321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'),'Yunus','Emre','abc@hotmail.com','312321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'),'Can','Sarıkaya','abc@hotmail.com','231321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'),'Serkan','Karakavus','abc@hotmail.com','321321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'),'Mehmet','Özgenç','abc@hotmail.com','312231','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'),'Hüseyin','Akif','abc@hotmail.com','123321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'),'Can','Bartu','abc@hotmail.com','321312','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Atatürk Sanatoryum Eğitim ve Araştırma Hastanesi'),'Nail','Çam','abc@hotmail.com','321312','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Sincan Eğitim ve Araştırma Hastanesi'),'Ozan','Erbas','abc@hotmail.com','3124213','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Sincan Eğitim ve Araştırma Hastanesi'),'Selin','Sıska','abc@hotmail.com','3215321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Sincan Eğitim ve Araştırma Hastanesi'),'Damla','Akün','abc@hotmail.com','312321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi'),'Fırat','Zahter','abc@hotmail.com','3123214','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Dışkapı Yıldırım Beyazıt Eğitim ve Araştırma Hastanesi'),'Melisa','Sorgun','abc@hotmail.com','312321','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}'),
+((SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ulucanlar Göz Eğitim ve Araştırma Hastanesi'),'Tarık','Canbeldek','abc@hotmail.com','13212345','{"Pazartesi": {"start_time": "08:00", "end_time": "17:00"}, "Salı": {"start_time": "08:00", "end_time": "17:00"}}')
+
+--Doktor uzmanlık alanına veri ekleme (Aynı isimli olan doktorları lastname ye göre ekledim)
+INSERT INTO doctors_expertise (doctor_id,experts) values
+((SELECT doctor_id FROM doctors WHERE firstname = 'Omer'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Ufuk'),'{"uzmanlik1": "Ortopedi", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Esra'),'{"uzmanlik1": "Üroloji", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Arife'),'{"uzmanlik1": "Nöroloji", "uzmanlik2": "Radyoloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Meryem'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Ahmet'),'{"uzmanlik1": "Ortopedi", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Burak'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Yunus'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Cerrahi"}'),
+((SELECT doctor_id FROM doctors WHERE lastname = 'Sarıkaya'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Dahiliye"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Mehmet'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Hüseyin'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Ortopedi"}'),
+((SELECT doctor_id FROM doctors WHERE lastname = 'Bartu'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Nail'),'{"uzmanlik1": "Dahiliye", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Ozan'),'{"uzmanlik1": "Kardiyoloji", "uzmanlik2": "Ortopedi"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Selin'),'{"uzmanlik1": "Dahiliye", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Damla'),'{"uzmanlik1": "Ortopedi", "uzmanlik2": "Cerrahi"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Fırat'),'{"uzmanlik1": "Ortopedi", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Melisa'),'{"uzmanlik1": "Cerrahi", "uzmanlik2": "Nöroloji"}'),
+((SELECT doctor_id FROM doctors WHERE firstname = 'Tarık'),'{"uzmanlik1": "Göz Hastalıkları"}')
+
+--Hasta tablosu veri ekleme
+insert into patients (identity,firstname,lastname,phone,birth_date,gender,address,email)
+values
+('10231365612','Ayşe','Yıldız','321321312','14.04.1989','F','Çankaya','abc@hotmail.com'),
+('21221345512','Burak','Nurdan','321321312','04.10.1999','M','Keçiören','abc@hotmail.com'),
+('52231325651','Mehmet','Yılmaz','321321312','24.02.1969','M','Yenimahalle','abc@hotmail.com'),
+('30531365123','Ahmet','Agören','321321312','12.03.1983','M','Sincan','abc@hotmail.com'),
+('40231566621','Melisa','Öktem','321321312','11.08.1974','F','Çankaya','abc@hotmail.com'),
+('30331265513','Meryem','Aydogdu','321321312','14.06.1986','F','İncek','abc@hotmail.com'),
+('14251366678','Nuriye','Kurnaz','321321312','27.07.1979','F','Çankaya','abc@hotmail.com'),
+('20132363619','Zeynep','Bucak','321321312','19.03.2009','F','Çankaya','abc@hotmail.com'),
+('54235366417','İhsan','Savas','321321312','03.03.2000','M','Çankaya','abc@hotmail.com'),
+('34536376819','Muhammet','Duymaz','321321312','05.03.2001','M','Çankaya','abc@hotmail.com'),
+('62134336113','Ali','Saygı','321321312','06.03.2002','M','Çankaya','abc@hotmail.com'),
+('76233366416','Özgür','Yılmaz','321321312','07.03.2003','M','Yenimahalle','abc@hotmail.com'),
+('12235266310','Eren','Ermis','321321312','08.03.2004','M','Beypazarı','abc@hotmail.com'),
+('12235466618','Semra','Yılmaz','321321312','09.03.2005','F','Ayaş','abc@hotmail.com'),
+('74231362437','Zeynep','Yörük','321321312','10.03.2006','F','Çankaya','abc@hotmail.com'),
+('54234364467','İnci','Ayan','321321312','03.05.2007','F','Çankaya','abc@hotmail.com')
+
+
+--Randevu tablosuna veri ekleme
+INSERT INTO appointments (identity, doctor_id, hospital_id, created_date, appointment_date)
+VALUES 
+  (
+  (SELECT identity FROM patients WHERE firstname = 'Ayşe'),
+    (SELECT doctor_id FROM doctors WHERE firstname = 'Omer'),
+    (SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),
+    NOW(),
+    '2024-07-29'
+),
+(
+    (SELECT identity FROM patients WHERE firstname = 'Burak'),
+    (SELECT doctor_id FROM doctors WHERE firstname = 'Ufuk'),
+    (SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),
+    NOW(),
+    '2024-11-19'
+),
+(
+    (SELECT identity FROM patients WHERE firstname = 'Mehmet'),
+    (SELECT doctor_id FROM doctors WHERE firstname = 'Esra'),
+    (SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),
+    NOW(),
+    '2025-01-10'
+),
+(
+    (SELECT identity FROM patients WHERE firstname = 'Ahmet'),
+    (SELECT doctor_id FROM doctors WHERE firstname = 'Arife'),
+    (SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),
+    NOW(),
+    '2025-03-10'
+)
+(
+    (SELECT identity FROM patients WHERE firstname = 'Melisa'),
+    (SELECT doctor_id FROM doctors WHERE firstname = 'Meryem'),
+    (SELECT hospital_id FROM hospitals WHERE hospital_name = 'Bilkent Şehir Hastanesi'),
+    NOW(),
+    '2024-11-19 09:30:00'
+),
+(
+    (SELECT identity FROM patients WHERE firstname = 'Meryem'),
+    (SELECT doctor_id FROM doctors WHERE firstname = 'Ahmet'),
+    (SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'),
+    NOW(),
+    '2024-08-10 15:30:00'
+),
+(
+    (SELECT identity FROM patients WHERE firstname = 'Nuriye'),
+    (SELECT doctor_id FROM doctors WHERE firstname = 'Burak'),
+    (SELECT hospital_id FROM hospitals WHERE hospital_name = 'Ankara Etlik Şehir Hastanesi'),
+    NOW(),
+    '2024-03-10 12:30:00'
+)
+
+
+--Randevu detayları için veri yükleme
+insert into appointments_details (appointment_id,examination_area,examination_type) values 
+((SELECT appointment_id FROM appointments WHERE doctor_id = '36ed0a42-0c7e-4bba-aa66-f561b53377dc'),'Kardiyoloji', 'Ekokardiyografi'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = 'e157bfb0-81d4-42f0-b03e-4aae98b427ac'),'Ortopedi', 'Röntgen'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = 'd51e70ef-6407-4f18-9509-5a86b4fc19ca'),'Üroloji', 'İdrar Testi'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = 'b9cac576-3966-4f0f-b28f-52243ef70b7c'),'Nöroloji', 'Manyetik Rezonans Görüntüleme (MR)'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = 'd027700c-bd78-4324-bd89-cd26536c1e5a'),'Kardiyoloji', 'Ekokardiyografi'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = '9217beb6-80d9-4f57-9fd0-431370d1ba71'),'Ortopedi', 'MR'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = '95243bd0-2dbd-405a-9e2c-35d83eedaf19'),'Kardiyoloji', 'Ekokardiyografi'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = '05337f3d-fd44-4db7-90c2-fec294133445'),'Göz', 'Göz Muayenesi'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = '243993e5-a563-44ab-bbce-73977d5c6eae'),'Dahiliye', 'Kan Testi'),
+((SELECT appointment_id FROM appointments WHERE doctor_id = '0e054907-e694-474f-a153-42622f2fe13f'),'Cerrahi', 'Ameliyat Öncesi Muayene')
+
+
+--Tıbbi geçmiş tablosuna veri ekleme
+INSERT INTO medical_history (identity, history_details) 
+VALUES 
+(
+    (SELECT identity FROM patients WHERE firstname = 'Ayşe'),
+    '{"durum":"Diyabet","tanı_tarihi":"2022-05-20","tedavi":"İnsülin"}'
+),
+(
+	(SELECT identity FROM patients WHERE firstname = 'Semra'),
+    '{"durum":"Hipertansiyon","tanı_tarihi":"2023-01-15","tedavi":"İlaç"}'
+	),
+	(
+	(SELECT identity FROM patients WHERE firstname = 'Meryem'),
+    '{"durum":"Tiroit Hastalığı","tanı_tarihi":"2021-11-05","tedavi":"İlaç"}'
+	),
+	(
+    (SELECT identity FROM patients WHERE firstname = 'İnci'),
+    '{"durum":"Şeker Hastalığı","tanı_tarihi":"2022-03-25","tedavi":"Diyet"}'
+),
+(
+    (SELECT identity FROM patients WHERE firstname = 'Mehmet'),
+    '{"durum":"Anjiyo","tanı_tarihi":"2023-02-18","tedavi":"Stent"}'
+),
+(
+	
+    (SELECT identity FROM patients WHERE firstname = 'Özgür'),
+    '{"durum":"Diyabet","tanı_tarihi":"2023-01-25","tedavi":"İnsülin"}'
+),
+(
+	(SELECT identity FROM patients WHERE firstname = 'Eren'),
+    '{"durum":"Hipertansiyon","tanı_tarihi":"2020-01-15","tedavi":"İlaç"}'
+	),
+	(
+	(SELECT identity FROM patients WHERE firstname = 'Nuriye'),
+    '{"durum":"Tiroit Hastalığı","tanı_tarihi":"2021-11-05","tedavi":"İlaç"}'
+	),
+	(
+    (SELECT identity FROM patients WHERE firstname = 'Burak'),
+    '{"durum":"Şeker Hastalığı","tanı_tarihi":"2021-05-25","tedavi":"Diyet"}'
+),
+(
+    (SELECT identity FROM patients WHERE firstname = 'Ahmet'),
+    '{"durum":"Anjiyo","tanı_tarihi":"2022-02-18","tedavi":"Stent"}'
+)
+
+
+--Receteler tablosu veri ekleme
+insert into prescription (doctor_id,identity,prescription_date,medication_details)
+values
+(
+(select doctor_id from doctors where firstname='Omer'),(SELECT identity FROM patients WHERE firstname = 'Ayşe'),'2024-05-03 10:00:00','{"ilaç": "parasetamol", "dozaj": "500mg"}'
+),
+(
+(select doctor_id from doctors where firstname='Ufuk'),(SELECT identity FROM patients WHERE firstname = 'Burak'),'2024-01-12 12:30:00','{"ilaç": "ibuprofen", "dozaj": "400mg"}'
+),
+(
+(select doctor_id from doctors where firstname='Esra'),(SELECT identity FROM patients WHERE firstname = 'Mehmet'),'2023-06-13 11:45:00','{"ilaçlar": "aspirin", "dozaj": "300mg"}'
+),
+(
+(select doctor_id from doctors where firstname='Arife'),(SELECT identity FROM patients WHERE firstname = 'Ahmet'),'2024-06-10 15:20:00','{"ilaç": "alerji hapı", "dozaj": "10mg"}'
+),
+(
+(select doctor_id from doctors where firstname='Meryem'),(SELECT identity FROM patients WHERE firstname = 'Melisa'),'2023-11-15 14:00:00','{"ilaç": "insülin", "dozaj": "10IU"}'
+)
+
